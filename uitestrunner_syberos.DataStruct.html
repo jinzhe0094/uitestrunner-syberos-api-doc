@@ -12,7 +12,7 @@
 <link href="search.html" rel="search" title="搜索"/>
 <link href="genindex.html" rel="index" title="索引"/>
 <link href="uitestrunner_syberos.Device.html" rel="next" title="Device module"/>
-<link href="uitestrunner_syberos.html" rel="prev" title="uitestrunner_syberos package"/>
+<link href="uitestrunner_syberos.html" rel="prev" title="uitestrunner_syberos"/>
 </head>
 <body class="antialiased text-sm sm:text-base text-gray">
 <div class="h-screen xl:grid xl:grid-layout" data-action="keydown@window-&gt;search#focus" data-controller="sidebar search" id="page">
@@ -35,7 +35,7 @@
 <nav class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col" role="navigation">
 <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="uitestrunner_syberos.html">uitestrunner_syberos package</a></div><ul class="current">
+<li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="uitestrunner_syberos.html">uitestrunner_syberos</a></div><ul class="current">
 <li class="toctree-l2 current expanded"><div class="nav-link"><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#">DataStruct module</a></div></li>
 <li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="uitestrunner_syberos.Device.html">Device module</a></div></li>
 <li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="uitestrunner_syberos.Events.html">Events module</a></div></li>
@@ -53,7 +53,7 @@
 </aside>
 <main class="px-10 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col h-full mx-0 md:mx-auto xl:mr-0" data-action="scroll-&gt;scroll#showButton" data-controller="scroll"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
 <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="index.html">uitestrunner-syberos 0.31.1 文档</a>
-<span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="uitestrunner_syberos.html">uitestrunner_syberos package</a>
+<span class="mr-1">/</span><a class="text-gray-light text-sm hover:text-gray-dark" href="uitestrunner_syberos.html">uitestrunner_syberos</a>
 <span class="mr-1">/</span><span aria-current="page">DataStruct module</span>
 </nav>
 <article class="flex-1" role="main">
@@ -65,48 +65,72 @@
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.Controller"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
-<p>控制端类型</p>
-<p>ANYWHERE: 非兼容平台</p>
-<p>WINDOWS_AMD64: x86_64架构的windows平台，推荐windows10</p>
-<p>LINUX_X86_64: x86_64架构的linux平台，推荐ubuntu18.04</p>
-<p>DARWIN_X86_64: x86_64架构的macOSX平台，推荐Catalina</p>
+<p>控制端类型。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ANYWHERE</strong> – 非兼容平台</p></li>
+<li><p><strong>WINDOWS_AMD64</strong> – x86_64架构的windows平台，推荐windows10</p></li>
+<li><p><strong>LINUX_X86_64</strong> – x86_64架构的linux平台，推荐ubuntu18.04</p></li>
+<li><p><strong>DARWIN_X86_64</strong> – x86_64架构的macOSX平台，推荐Catalina</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.DisplayState">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">DisplayState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.DisplayState"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
-<p>显示器状态</p>
-<p>ON: 亮屏</p>
-<p>OFF: 灭屏</p>
-<p>DIM: 暗屏</p>
+<p>显示器状态。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ON</strong> – 亮屏</p></li>
+<li><p><strong>OFF</strong> – 灭屏</p></li>
+<li><p><strong>DIM</strong> – 暗屏</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.FileInfo">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">FileInfo</code><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.FileInfo"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">object</code></p>
-<p>文件/文件夹信息</p>
-<p>name: 名称</p>
-<p>type: 类型</p>
-<p>size: 大小(byte)</p>
-<p>suffix: 后缀(最后一个”.”符号之后的字符串，如果没有则为空字符串)</p>
-<p>permission: 权限的数字表示</p>
-<p>last_modified: 最后修改时间(秒)</p>
-<p>last_read: 最后读取时间(秒)</p>
-<p>owner: 拥有者名称</p>
-<p>owner_id: 拥有者ID</p>
-<p>group: 用户组名称</p>
-<p>group_id: 用户组ID</p>
+<p>文件/文件夹信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – 名称</p></li>
+<li><p><strong>type</strong> – 类型</p></li>
+<li><p><strong>size</strong> – 大小(byte)</p></li>
+<li><p><strong>suffix</strong> – 后缀(最后一个”.”符号之后的字符串，如果没有则为空字符串)</p></li>
+<li><p><strong>permission</strong> – 权限的数字表示</p></li>
+<li><p><strong>last_modified</strong> – 最后修改时间(秒)</p></li>
+<li><p><strong>last_read</strong> – 最后读取时间(秒)</p></li>
+<li><p><strong>owner</strong> – 拥有者名称</p></li>
+<li><p><strong>owner_id</strong> – 拥有者ID</p></li>
+<li><p><strong>group</strong> – 用户组名称</p></li>
+<li><p><strong>group_id</strong> – 用户组ID</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.FileInfo.Type">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">Type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.FileInfo.Type"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
-<p>文件类型</p>
-<p>FILE: 文件(包括有效的符号连接)</p>
-<p>DIRECTORY: 文件夹</p>
-<p>OTHER: 其他类型</p>
+<p>文件类型。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FILE</strong> – 文件(包括有效的符号连接)</p></li>
+<li><p><strong>DIRECTORY</strong> – 文件夹</p></li>
+<li><p><strong>OTHER</strong> – 其他类型</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.FileInfo.type">
@@ -116,34 +140,88 @@
 </dd></dl>
 </dd></dl>
 <dl class="py class code-definition">
+<dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.Keys">
+<em class="property">class<span class="w"> </span></em><code class="sig-name descname">Keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.Keys"><span>#</span></a></dt>
+<dd>
+<p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
+<p>设备按键。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>BACK</strong> – 返回按键</p></li>
+<li><p><strong>HOME</strong> – 主页按键</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.LockState">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">LockState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.LockState"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
-<p>锁屏状态</p>
-<p>LOCKED: 已锁定</p>
-<p>UNLOCKED: 已解锁</p>
+<p>锁屏状态。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>LOCKED</strong> – 已锁定</p></li>
+<li><p><strong>UNLOCKED</strong> – 已解锁</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.Point">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">Point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">int</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="n">int</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.Point"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">object</code></p>
-<p>坐标点</p>
-<p>x: 横向坐标点</p>
-<p>y: 纵向坐标点</p>
+<p>坐标点。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 横向坐标点</p></li>
+<li><p><strong>y</strong> – 纵向坐标点</p></li>
+</ul>
+</dd>
+<dt class="field-even">变量</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>x</strong> – 横向坐标点</p></li>
+<li><p><strong>y</strong> – 纵向坐标点</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.ScreenOrientation">
 <em class="property">class<span class="w"> </span></em><code class="sig-name descname">ScreenOrientation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.ScreenOrientation"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
-<p>屏幕方向</p>
-<p>PRIMARY: 主要方向 一般为0度</p>
-<p>PORTRAIT: 纵向 一般为0度</p>
-<p>LANDSCAPE: 横向 一般为90度</p>
-<p>INVERTED_PORTRAIT: 反纵向 一般为180度</p>
-<p>INVERTED_LANDSCAPE: 反横向 一般为270度</p>
+<p>屏幕方向。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>PRIMARY</strong> – 主要方向 一般为0度</p></li>
+<li><p><strong>PORTRAIT</strong> – 纵向 一般为0度</p></li>
+<li><p><strong>LANDSCAPE</strong> – 横向 一般为90度</p></li>
+<li><p><strong>INVERTED_PORTRAIT</strong> – 反纵向 一般为180度</p></li>
+<li><p><strong>INVERTED_LANDSCAPE</strong> – 反横向 一般为270度</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py class code-definition">
+<dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.WatcherActive">
+<em class="property">class<span class="w"> </span></em><code class="sig-name descname">WatcherActive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.DataStruct.WatcherActive"><span>#</span></a></dt>
+<dd>
+<p>基类：<code class="xref py py-class docutils literal notranslate">enum.Enum</code></p>
+<p>Watcher执行动作类型。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>CLICK</strong> – 点击屏幕</p></li>
+<li><p><strong>LAUNCH</strong> – 启动应用</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 </section>
 </article>

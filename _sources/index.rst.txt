@@ -11,10 +11,3 @@ Welcome to uitestrunner_syberos's documentation!
    :caption: Contents:
 
    uitestrunner_syberos
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

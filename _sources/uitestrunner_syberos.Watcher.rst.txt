@@ -5,5 +5,4 @@ Watcher module
 
 .. automodule:: uitestrunner_syberos.Watcher
    :members:
-   :undoc-members:
    :show-inheritance:

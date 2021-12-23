@@ -1,5 +1,5 @@
-uitestrunner\_syberos package
-=============================
+uitestrunner\_syberos
+=====================
 
 .. toctree::
    :maxdepth: 4

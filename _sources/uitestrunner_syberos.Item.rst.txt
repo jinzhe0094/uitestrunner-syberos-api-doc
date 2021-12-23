@@ -5,5 +5,4 @@ Item module
 
 .. automodule:: uitestrunner_syberos.Item
    :members:
-   :undoc-members:
    :show-inheritance:
