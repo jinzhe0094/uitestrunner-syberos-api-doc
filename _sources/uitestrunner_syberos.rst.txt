@@ -1,0 +1,11 @@
+uitestrunner\_syberos package
+=============================
+
+.. toctree::
+   :maxdepth: 4
+
+   uitestrunner_syberos.DataStruct
+   uitestrunner_syberos.Device
+   uitestrunner_syberos.Events
+   uitestrunner_syberos.Item
+   uitestrunner_syberos.Watcher
