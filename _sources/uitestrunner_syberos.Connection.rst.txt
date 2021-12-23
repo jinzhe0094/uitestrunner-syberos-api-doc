@@ -1,7 +1,0 @@
-Connection module
-=================
-
-.. automodule:: uitestrunner_syberos.Connection
-   :members:
-   :undoc-members:
-   :show-inheritance:

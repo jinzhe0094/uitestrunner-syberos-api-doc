@@ -57,32 +57,32 @@
 </nav>
 <article class="flex-1" role="main">
 <section id="watcher-module">
-<h1>Watcher module<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#watcher-module"><span>#</span></a></h1>
+<h1>Watcher module<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#watcher-module"><span>#</span></a></h1>
 <p>监视者模块，主要包含监视者类与监视者上下文类，负责监视者实例的生成与管理，通常由Device.watcher(name: str)接口直接返回Watcher实例。</p>
 <span class="target" id="module-uitestrunner_syberos.Watcher"></span><dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchWorker">
-<em class="property">class<span class="w"> </span></em><code class="sig-name descname">WatchWorker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">main_pid</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker"><span>#</span></a></dt>
+<em class="property">class<span class="w"> </span></em><code class="sig-name descname">WatchWorker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">main_pid</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">object</code></p>
 <dl class="py method code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchWorker.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker.run"><span>#</span></a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker.run"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchWorker.watch_data">
-<code class="sig-name descname">watch_data</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>{}</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker.watch_data"><span>#</span></a></dt>
+<code class="sig-name descname">watch_data</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>{}</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.WatchWorker.watch_data"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 </dd></dl>
 <dl class="py class code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher">
-<em class="property">class<span class="w"> </span></em><code class="sig-name descname">Watcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span></em>, <em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.Watcher"><span>#</span></a></dt>
+<em class="property">class<span class="w"> </span></em><code class="sig-name descname">Watcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="n">dict</span></em>, <em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.Watcher"><span>#</span></a></dt>
 <dd>
 <p>基类：<code class="xref py py-class docutils literal notranslate">object</code></p>
 <dl class="py method code-definition">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher.when">
-<code class="sig-name descname">when</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sop_id</span><span class="p">:</span><span class="w"> </span><span class="n">str</span></em>, <em class="sig-param"><span class="n">xpath_key</span><span class="p">:</span><span class="w"> </span><span class="n">str</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.Watcher.when"><span>#</span></a></dt>
+<code class="sig-name descname">when</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sop_id</span><span class="p">:</span><span class="w"> </span><span class="n">str</span></em>, <em class="sig-param"><span class="n">xpath_key</span><span class="p">:</span><span class="w"> </span><span class="n">str</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#uitestrunner_syberos.Watcher.Watcher.when"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 </dd></dl>
