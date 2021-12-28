@@ -6,7 +6,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Item module &mdash; uitestrunner-syberos 0.32 文档</title>
+  <title>Item module &mdash; uitestrunner-syberos 0.32.1 文档</title>
   
 
   
@@ -133,7 +133,7 @@
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Item.Item" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>元素控件类，通过Device.find_item_by_xpath_key()与Device.find_item_by_xpath()两个结果返回实例化对象，不推荐单独使用。</p>
+<p>元素控件类，通过Device.find_item_by_xpath_key()与Device.find_item_by_xpath()两个接口结果返回实例化对象，不推荐单独使用。</p>
 <dl class="field-list simple">
 <dt class="field-odd">变量</dt>
 <dd class="field-odd"><ul class="simple">
@@ -297,6 +297,17 @@
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>属性值，拥有焦点为True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.grab_image_to_base64">
+<span class="sig-name descname"><span class="pre">grab_image_to_base64</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.grab_image_to_base64" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件的显示范围截图。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>截图的base64形态</p>
 </dd>
 </dl>
 </dd></dl>
@@ -515,7 +526,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.32',
+            VERSION:'0.32.1',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
