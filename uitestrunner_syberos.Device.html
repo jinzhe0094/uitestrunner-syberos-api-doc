@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Device module &mdash; uitestrunner-syberos 0.32.5 文档</title>
@@ -126,7 +127,7 @@
                     <div class="document">
                         
                             
-  <div class="section" id="device-module">
+  <section id="device-module">
 <h1>Device module<a class="headerlink" href="#device-module" title="永久链接至标题">¶</a></h1>
 <p>SyberOS设备类，继承自Events基类，负责驱动设备模拟事件与获取布局信息。</p>
 <span class="target" id="module-uitestrunner_syberos.Device"></span><dl class="py class">
@@ -150,6 +151,20 @@
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.delete_watcher">
+<span class="sig-name descname"><span class="pre">delete_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.delete_watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>删除一个已有的监视者。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.display_height">
 <span class="sig-name descname"><span class="pre">display_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.display_height" title="永久链接至目标">¶</a></dt>
@@ -251,6 +266,20 @@
 <dl class="field-list simple">
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>系统版本字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.pause_watcher">
+<span class="sig-name descname"><span class="pre">pause_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.pause_watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>暂停一个已有的监视者。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
 </dd>
 </dl>
 </dd></dl>
@@ -380,6 +409,20 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.start_watcher">
+<span class="sig-name descname"><span class="pre">start_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.start_watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>启动一个已有的监视者。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_output">
 <span class="sig-name descname"><span class="pre">syslog_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_output" title="永久链接至目标">¶</a></dt>
 <dd><p>获取设备log输出开关状态。</p>
@@ -448,7 +491,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.watcher">
 <span class="sig-name descname"><span class="pre">watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.Watcher" title="uitestrunner_syberos.Watcher.Watcher"><span class="pre">uitestrunner_syberos.Watcher.Watcher</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.watcher" title="永久链接至目标">¶</a></dt>
-<dd><p>创建一个监视者，可以根据指定条件作出相应反应。</p>
+<dd><p>创建一个待启动的监视者，可以根据指定条件作出相应反应。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>name</strong> – 标识名称，不可重复</p>
@@ -461,7 +504,7 @@
 
 </dd></dl>
 
-</div>
+</section>
 
 
                         
@@ -495,7 +538,7 @@
     <div class="footer" role="contentinfo">
         <div class="container">
             &#169; 版权所有 2021, Jinzhe Wang.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.
         </div>
     </div>  
 
