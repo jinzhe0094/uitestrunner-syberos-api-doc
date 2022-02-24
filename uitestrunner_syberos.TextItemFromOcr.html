@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TextItemFromOcr module &mdash; uitestrunner-syberos 1.0.2 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Watcher module" href="uitestrunner_syberos.Watcher.html" /> 
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
+            <a class="site-title" href="index.html">
+                uitestrunner-syberos
+            </a>
+        </div>
+    </header>
+
+
+<div class="breadcrumbs-outer hidden-xs-down">
+    <div class="container">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="breadcrumbs">
+    
+      <li><a href="index.html">Docs</a></li>
+        
+          <li><a href="uitestrunner_syberos.html">uitestrunner_syberos</a></li>
+        
+      <li>TextItemFromOcr module</li>
+    
+    
+      <li class="breadcrumbs-aside">
+        
+            
+            <a href="_sources/uitestrunner_syberos.TextItemFromOcr.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+</div>
+    </div>
+</div>
+    <div class="main-outer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 site-nav">
+                    
+<div role="search">
+    <form class="search" action="search.html" method="get">
+        <div class="icon-input">
+            <input type="text" name="q" placeholder="Search" />
+            <span class="icon-search"></span>
+        </div>
+        <input type="submit" value="转向" class="d-hidden" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                    <div class="site-nav-tree">
+                        
+                            
+                            
+                                <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="uitestrunner_syberos.html">uitestrunner_syberos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.DataStruct.html">DataStruct module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Device.html">Device module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Events.html">Events module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Item.html">Item module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Watcher.html">Watcher module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TextItemFromOcr module</a></li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="document">
+                        
+                            
+  <section id="textitemfromocr-module">
+<h1>TextItemFromOcr module<a class="headerlink" href="#textitemfromocr-module" title="永久链接至标题">¶</a></h1>
+<p>ocr识别到的文本元素类型。</p>
+<span class="target" id="module-uitestrunner_syberos.TextItemFromOcr"></span><dl class="py class">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextItemFromOcr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ocr识别到的文本元素类型。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_x">
+<span class="sig-name descname"><span class="pre">center_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_x" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的中心点相对于全局的映射横坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>横坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_y">
+<span class="sig-name descname"><span class="pre">center_y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_y" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的中心点相对于全局的映射纵坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>纵坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.click">
+<span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.click" title="永久链接至目标">¶</a></dt>
+<dd><p>点击文本。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>delay</strong> – 点击延时时间(单位:毫秒)，默认无延时</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.height" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件的高度整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>高度整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.submit_string">
+<span class="sig-name descname"><span class="pre">submit_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.submit_string" title="永久链接至目标">¶</a></dt>
+<dd><p>向元素控件提交文本(模拟输入法事件)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>text</strong> – 要提交的文本字符串</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.text">
+<span class="sig-name descname"><span class="pre">text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.text" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的文本信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>文本字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.width" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件的宽度整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>宽度整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.x">
+<span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.x" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的左上角相对于全局的映射横坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>横坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.y">
+<span class="sig-name descname"><span class="pre">y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.y" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的左上角相对于全局的映射纵坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>纵坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.2',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+    <div class="footer" role="contentinfo">
+        <div class="container">
+            &#169; 版权所有 2021-2022, Jinzhe Wang.
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.
+        </div>
+    </div>  
+
+</body>
+</html>
