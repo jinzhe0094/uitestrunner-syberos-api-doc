@@ -6,7 +6,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>索引 &mdash; uitestrunner-syberos 1.0.0 文档</title>
+  <title>索引 &mdash; uitestrunner-syberos 1.0.2 文档</title>
   
 
   
@@ -108,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Events.html">Events module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Item.html">Item module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Watcher.html">Watcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html">TextItemFromOcr module</a></li>
 </ul>
 </li>
 </ul>
@@ -173,9 +174,13 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_x">center_x() (TextItemFromOcr 方法)</a>
+</li>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.center_x_to_global">center_x_to_global() (Item 方法)</a>
 </li>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.center_x_to_item">center_x_to_item() (Item 方法)</a>
+</li>
+      <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_y">center_y() (TextItemFromOcr 方法)</a>
 </li>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.center_y_to_global">center_y_to_global() (Item 方法)</a>
 </li>
@@ -189,6 +194,8 @@
 
       <ul>
         <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.click">(Item 方法)</a>
+</li>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.click">(TextItemFromOcr 方法)</a>
 </li>
         <li><a href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.WatchContext.click">(WatchContext 方法)</a>
 </li>
@@ -299,13 +306,15 @@
 </li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.get_panel_state">get_panel_state() (Events 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.get_rotation_allowed">get_rotation_allowed() (Events 方法)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.get_screen_orientation">get_screen_orientation() (Events 方法)</a>
 </li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.get_system_auto_time">get_system_auto_time() (Events 方法)</a>
+</li>
+      <li><a href="uitestrunner_syberos.Device.html#uitestrunner_syberos.Device.Device.get_text_item_list">get_text_item_list() (Device 方法)</a>
 </li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.get_volume">get_volume() (Events 方法)</a>
 </li>
@@ -331,10 +340,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.has_contents">has_contents() (Item 方法)</a>
 </li>
+      <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.height">height() (Item 方法)</a>
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.height">(TextItemFromOcr 方法)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.height">height() (Item 方法)</a>
-</li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.home">home() (Events 方法)</a>
 </li>
   </ul></td>
@@ -497,10 +510,10 @@
 </li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.set_rotation_allowed">set_rotation_allowed() (Events 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Device.html#uitestrunner_syberos.Device.Device.set_screenshots_path">set_screenshots_path() (Device 方法)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Device.html#uitestrunner_syberos.Device.Device.set_syslog_output">set_syslog_output() (Device 方法)</a>
 </li>
       <li><a href="uitestrunner_syberos.Device.html#uitestrunner_syberos.Device.Device.set_syslog_save_start">set_syslog_save_start() (Device 方法)</a>
@@ -525,6 +538,8 @@
 
       <ul>
         <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.submit_string">(Item 方法)</a>
+</li>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.submit_string">(TextItemFromOcr 方法)</a>
 </li>
       </ul></li>
       <li><a href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events.swipe">swipe() (Events 方法)</a>
@@ -551,9 +566,15 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.temp_id">temp_id() (Item 方法)</a>
 </li>
+      <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.text">text() (Item 方法)</a>
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.text">(TextItemFromOcr 方法)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.text">text() (Item 方法)</a>
+      <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr">TextItemFromOcr (uitestrunner_syberos.TextItemFromOcr 中的类)</a>
 </li>
       <li><a href="uitestrunner_syberos.DataStruct.html#uitestrunner_syberos.DataStruct.FileInfo.type">type (FileInfo 属性)</a>
 </li>
@@ -584,13 +605,20 @@
         <li><a href="uitestrunner_syberos.Events.html#module-uitestrunner_syberos.Events">模块</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     uitestrunner_syberos.Item
 
       <ul>
         <li><a href="uitestrunner_syberos.Item.html#module-uitestrunner_syberos.Item">模块</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    uitestrunner_syberos.TextItemFromOcr
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#module-uitestrunner_syberos.TextItemFromOcr">模块</a>
 </li>
       </ul></li>
       <li>
@@ -632,10 +660,10 @@
 </li>
       <li><a href="uitestrunner_syberos.Device.html#uitestrunner_syberos.Device.Device.watcher">watcher() (Device 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.DataStruct.html#uitestrunner_syberos.DataStruct.WatcherActive">WatcherActive (uitestrunner_syberos.DataStruct 中的类)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.WatchContext.when">when() (WatchContext 方法)</a>
 
       <ul>
@@ -643,7 +671,11 @@
 </li>
       </ul></li>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.width">width() (Item 方法)</a>
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.width">(TextItemFromOcr 方法)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -651,7 +683,11 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.x">x() (Item 方法)</a>
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.x">(TextItemFromOcr 方法)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -659,7 +695,11 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item.y">y() (Item 方法)</a>
+
+      <ul>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.y">(TextItemFromOcr 方法)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -686,6 +726,8 @@
 </li>
         <li><a href="uitestrunner_syberos.Item.html#module-uitestrunner_syberos.Item">uitestrunner_syberos.Item</a>
 </li>
+        <li><a href="uitestrunner_syberos.TextItemFromOcr.html#module-uitestrunner_syberos.TextItemFromOcr">uitestrunner_syberos.TextItemFromOcr</a>
+</li>
         <li><a href="uitestrunner_syberos.Watcher.html#module-uitestrunner_syberos.Watcher">uitestrunner_syberos.Watcher</a>
 </li>
       </ul></li>
@@ -707,7 +749,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.0.2',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

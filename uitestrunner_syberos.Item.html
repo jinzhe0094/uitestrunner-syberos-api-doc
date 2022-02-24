@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Item module &mdash; uitestrunner-syberos 1.0.0 文档</title>
+  <title>Item module &mdash; uitestrunner-syberos 1.0.2 文档</title>
   
 
   
@@ -115,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Events.html">Events module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Item module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Watcher.html">Watcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html">TextItemFromOcr module</a></li>
 </ul>
 </li>
 </ul>
@@ -132,7 +133,7 @@
 <p>元素控件类，通过此类对象可以获取元素信息和对其进行操作。</p>
 <span class="target" id="module-uitestrunner_syberos.Item"></span><dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Item.Item" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d:</span> <span class="pre">&lt;module</span> <span class="pre">'uitestrunner_syberos.Device'</span> <span class="pre">from</span> <span class="pre">'/Users/wangjinzhe/PycharmProjects/uitestrunner_syberos/src/uitestrunner_syberos/Device.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Item.Item" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>元素控件类，通过Device.find_item_by_xpath_key()与Device.find_item_by_xpath()两个接口结果返回实例化对象，不推荐单独使用。</p>
 <dl class="field-list simple">
@@ -148,7 +149,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.center_x_to_global">
 <span class="sig-name descname"><span class="pre">center_x_to_global</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.center_x_to_global" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的相对于全局的映射横坐标整数值。</p>
+<dd><p>获取元素控件的中心点相对于全局的映射横坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -162,7 +163,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.center_x_to_item">
 <span class="sig-name descname"><span class="pre">center_x_to_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.center_x_to_item" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的相对于父对象的映射横坐标整数值。</p>
+<dd><p>获取元素控件的中心点相对于父对象的映射横坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -176,7 +177,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.center_y_to_global">
 <span class="sig-name descname"><span class="pre">center_y_to_global</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.center_y_to_global" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的相对于全局的映射纵坐标整数值。</p>
+<dd><p>获取元素控件的中心点相对于全局的映射纵坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -190,7 +191,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.center_y_to_item">
 <span class="sig-name descname"><span class="pre">center_y_to_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.center_y_to_item" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的相对于父对象的映射纵坐标整数值。</p>
+<dd><p>获取元素控件的中心点相对于父对象的映射纵坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -498,7 +499,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.x">
 <span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.x" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的横坐标整数值。</p>
+<dd><p>获取元素控件的左上角横坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -512,7 +513,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item.y">
 <span class="sig-name descname"><span class="pre">y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Item.Item.y" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件的纵坐标整数值。</p>
+<dd><p>获取元素控件的左上角纵坐标整数值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>refresh</strong> – 是否刷新布局信息(默认值False)</p>
@@ -555,7 +556,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0',
+            VERSION:'1.0.2',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
