@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Events module &mdash; uitestrunner-syberos 1.0.2 文档</title>
+  <title>Events module &mdash; uitestrunner-syberos 1.0.3 文档</title>
   
 
   
@@ -194,6 +194,23 @@
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>成功返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.connect_open_wifi">
+<span class="sig-name descname"><span class="pre">connect_open_wifi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ssid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.connect_open_wifi" title="永久链接至目标">¶</a></dt>
+<dd><p>连接设备至开放WiFi网络。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ssid</strong> – WiFi网络名称</p></li>
+<li><p><strong>timeout</strong> – 超时时间(单位:秒)，默认为框架超时时间</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
 </dd>
 </dl>
 </dd></dl>
@@ -526,7 +543,7 @@
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>delay</strong> – 点击延时时间(单位:毫秒)，默认无延时</p></li>
-<li><p><strong>timeout</strong> – 超时时间 (单位:秒)，默认为框架超时时间</p></li>
+<li><p><strong>timeout</strong> – 超时时间(单位:秒)，默认为框架超时时间</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -559,6 +576,17 @@
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>已安装返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.is_network_available">
+<span class="sig-name descname"><span class="pre">is_network_available</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.is_network_available" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前网络状态是否可用。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>网络可用状态</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1138,7 +1166,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.2',
+            VERSION:'1.0.3',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
