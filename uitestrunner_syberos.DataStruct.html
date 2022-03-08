@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DataStruct module &mdash; uitestrunner-syberos 1.0.3 文档</title>
+  <title>DataStruct module &mdash; uitestrunner-syberos 1.0.4 文档</title>
   
 
   
@@ -182,6 +182,31 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.AuthenError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AuthenError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.DataStruct.AuthenError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>口令认证错误码。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>AUTHEN_OK</strong> – 无错误</p></li>
+<li><p><strong>AUTHEN_REPLY_ERROR</strong> – 获取结果失败</p></li>
+<li><p><strong>AUTHEN_PASSWORD_IS_EMPTY</strong> – 密码为空</p></li>
+<li><p><strong>AUTHEN_TYPE_IS_INVALID</strong> – 类型无效</p></li>
+<li><p><strong>AUTHEN_PASSWORD_TYPE_MISMATCH</strong> – 密码类型不匹配</p></li>
+<li><p><strong>AUTHEN_PASSWORD_VERIFY_FAILED</strong> – 密码认证失败</p></li>
+<li><p><strong>AUTHEN_PASSWORD_EXISTED</strong> – 密码已存在</p></li>
+<li><p><strong>AUTHEN_PERMISSION_DENIED</strong> – 无敏感权限</p></li>
+<li><p><strong>AUTHEN_MAX_RETRY_INVALID</strong> – 最大重试次数错误</p></li>
+<li><p><strong>AUTHEN_PARAMETER_INVALID</strong> – 参数无效</p></li>
+<li><p><strong>AUTHEN_LOCKOUT</strong> – 锁定</p></li>
+<li><p><strong>AUTHEN_PASSWORD_EQUAL</strong> – 相同密码</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.Controller">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.DataStruct.Controller" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
@@ -311,6 +336,23 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.PasswordType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PasswordType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.DataStruct.PasswordType" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>设备密码类型。</p>
+<dl class="field-list simple">
+<dt class="field-odd">变量</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>PASSWORD_WEAK</strong> – 简单密码</p></li>
+<li><p><strong>PASSWORD_STRONG</strong> – 复杂密码</p></li>
+<li><p><strong>PASSWORD_GRAPHIC</strong> – 图形密码</p></li>
+<li><p><strong>PASSWORD_NONE</strong> – 无密码</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.DataStruct.Point">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.DataStruct.Point" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -382,7 +424,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.3',
+            VERSION:'1.0.4',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
