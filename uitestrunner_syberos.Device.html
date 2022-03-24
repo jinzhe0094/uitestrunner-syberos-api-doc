@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Device module &mdash; uitestrunner-syberos 1.0.4 文档</title>
+  <title>Device module &mdash; uitestrunner-syberos 1.0.7 文档</title>
   
 
   
@@ -133,7 +133,7 @@
 <p>SyberOS设备类，继承自Events基类，负责驱动设备模拟事件与获取布局信息。</p>
 <span class="target" id="module-uitestrunner_syberos.Device"></span><dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'192.168.100.100'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10008</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_main</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_main</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events" title="uitestrunner_syberos.Events.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">uitestrunner_syberos.Events.Events</span></code></a></p>
 <p>Device初始化，获取设备初始信息，创建相关子线程与子进程等。</p>
 <dl class="field-list simple">
@@ -292,6 +292,23 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.has_environment">
+<span class="sig-name descname"><span class="pre">has_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'General'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.has_environment" title="永久链接至目标">¶</a></dt>
+<dd><p>获取指定环境变量是否存在。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – 键</p></li>
+<li><p><strong>module</strong> – 模块名称，默认值：General</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.os_version">
 <span class="sig-name descname"><span class="pre">os_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.os_version" title="永久链接至目标">¶</a></dt>
 <dd><p>获取SyberOS系统版本。</p>
@@ -329,11 +346,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.screenshot">
-<span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'./screenshots/'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.screenshot" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/wangjinzhe/PycharmProjects/uitestrunner_syberos/src/screenshots/'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.screenshot" title="永久链接至目标">¶</a></dt>
 <dd><p>获取设备当前屏幕截图。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>path</strong> – 截图存放路径(默认为前工作目录下的screenshots文件夹或者用户通过Device.set_screenshots_path(path: str)接口设置的路径)</p>
+<dd class="field-odd"><p><strong>path</strong> – 截图存放路径(默认为前脚本目录下的screenshots文件夹或者用户通过Device.set_screenshots_path(path: str)接口设置的路径)</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>截图名称</p>
@@ -369,7 +386,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_screenshots_path">
 <span class="sig-name descname"><span class="pre">set_screenshots_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_screenshots_path" title="永久链接至目标">¶</a></dt>
-<dd><p>设置存放系统截图的文件夹路径(默认为当前工作目录下的screenshots文件夹)。</p>
+<dd><p>设置存放系统截图的文件夹路径(默认为当前脚本目录下的screenshots文件夹)。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>path</strong> – 文件夹路径</p>
@@ -399,12 +416,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_syslog_save_start">
-<span class="sig-name descname"><span class="pre">set_syslog_save_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'./syslog/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_syslog_save_start" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_syslog_save_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/wangjinzhe/PycharmProjects/uitestrunner_syberos/src/syslog/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_syslog_save_start" title="永久链接至目标">¶</a></dt>
 <dd><p>设置保存设备log开始。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>save_path</strong> – 保存文件路径，指定一个文件夹的相对或绝对路径，默认在当前工作目录下的syslog文件夹</p></li>
+<li><p><strong>save_path</strong> – 保存文件路径，指定一个文件夹的相对或绝对路径，默认在当前脚本目录下的syslog文件夹</p></li>
 <li><p><strong>save_name</strong> – log文件保存名称，默认以时间戳命名</p></li>
 <li><p><strong>save_keyword</strong> – 筛选关键字(筛选最小单位行)，如果为空则全部保存</p></li>
 </ul>
@@ -429,7 +446,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_xpath_list">
 <span class="sig-name descname"><span class="pre">set_xpath_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_xpath_list" title="永久链接至目标">¶</a></dt>
-<dd><p>设置存放xpath信息的ini文件路径(默认为当前工作目录下的xpath_list.ini)。</p>
+<dd><p>设置存放xpath信息的ini文件路径(默认为当前脚本目录下的xpath_list.ini)。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>path</strong> – 文件路径</p>
@@ -552,7 +569,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.4',
+            VERSION:'1.0.7',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
