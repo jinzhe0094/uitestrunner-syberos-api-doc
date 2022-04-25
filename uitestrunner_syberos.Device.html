@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Device module &mdash; uitestrunner-syberos 1.1.0 文档</title>
+  <title>Device module &mdash; uitestrunner-syberos 1.1.1 文档</title>
   
 
   
@@ -133,7 +133,7 @@
 <p>SyberOS设备类，继承自Events基类，负责驱动设备模拟事件与获取布局信息。</p>
 <span class="target" id="module-uitestrunner_syberos.Device"></span><dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_main</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syslog_enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_main</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events" title="uitestrunner_syberos.Events.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">uitestrunner_syberos.Events.Events</span></code></a></p>
 <p>Device初始化，获取设备初始信息，创建相关子线程与子进程等。</p>
 <dl class="field-list simple">
@@ -141,6 +141,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>host</strong> – 设备通信IP地址(默认为192.168.100.100)</p></li>
 <li><p><strong>port</strong> – 设备通信端口(默认为10008，一般不需修改)</p></li>
+<li><p><strong>syslog_enable</strong> – 是否开启syslog(默认为关闭状态，不可中途修改)</p></li>
 <li><p><strong>_main</strong> – 主进程标识符(禁止用户使用)</p></li>
 </ul>
 </dd>
@@ -580,7 +581,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.1.0',
+            VERSION:'1.1.1',
             LANGUAGE:'zh_CN',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
