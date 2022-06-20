@@ -1,182 +1,200 @@
-
-
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>搜索 &mdash; uitestrunner-syberos 1.1.1 文档</title>
-  
-
-  
-  
-  
-  
-
-  
-
-  
-  
+<html  lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>搜索</title>
     
-
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
   
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
 
-  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.min.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="#" /> 
-
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <a class="site-nav-toggle hidden-lg-up"><i class="icon-menu"></i></a>
-            <a class="site-title" href="index.html">
-                uitestrunner-syberos
-            </a>
-        </div>
-    </header>
-
-
-<div class="breadcrumbs-outer hidden-xs-down">
-    <div class="container">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="breadcrumbs">
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+  <script type="text/javascript" src="_static/searchtools.js"></script>
+  <script src="_static/language_data.js"></script>
     
-      <li><a href="index.html">Docs</a></li>
-        
-      <li>搜索</li>
+  <link rel="index" title="索引" href="genindex.html" />
+  <link rel="search" title="搜索" href="#" />
+  <script type="text/javascript" src="searchindex.js" defer></script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
+   
+
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
     
+      <span class="site-name">uitestrunner-syberos</span>
     
-      <li class="breadcrumbs-aside">
-        
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
             
-        
-      </li>
-    
-  </ul>
-</div>
-    </div>
-</div>
-    <div class="main-outer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-3 site-nav">
-                    
-<div role="search">
-    <form class="search" action="#" method="get">
-        <div class="icon-input">
-            <input type="text" name="q" placeholder="Search" />
-            <span class="icon-search"></span>
-        </div>
-        <input type="submit" value="转向" class="d-hidden" />
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">快速搜索</span>
+    <div class="searchformwrapper">
+      <form class="search" action="#" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="搜索" />
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-                    <div class="site-nav-tree">
-                        
-                            
-                            
-                                <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="uitestrunner_syberos.html">uitestrunner_syberos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.DataStruct.html">DataStruct module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Device.html">Device module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Events.html">Events module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Item.html">Item module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.Watcher.html">Watcher module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html">TextItemFromOcr module</a></li>
-</ul>
-</li>
-</ul>
-
-                            
-                        
-                    </div>
-                </div>
-                <div class="col-12 col-lg-9">
-                    <div class="document">
-                        
-                            
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
+      </form>
+    </div>
   </div>
-  </noscript>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="uitestrunner_syberos.html#uitestrunner-syberos">uitestrunner_syberos</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.DataStruct.html" class="reference internal ">DataStruct module</a>
+            
 
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.Device.html" class="reference internal ">Device module</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.Events.html" class="reference internal ">Events module</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.Item.html" class="reference internal ">Item module</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.Watcher.html" class="reference internal ">Watcher module</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="uitestrunner_syberos.TextItemFromOcr.html" class="reference internal ">TextItemFromOcr module</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>搜索</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <h1 id="search-documentation">搜索</h1>
+  <div id="fallback" class="admonition warning">
+  <p>
+    请激活 JavaScript 以开启搜索功能。
+  </p>
+  </div>
+  <p>
+    From here you can search these documents. Enter your search
+    words into the box below and click "search". Note that the search
+    function will automatically search for all of the words. Pages
+    containing fewer words won't appear in the result list.
+  </p>
+  <form action="" method="get">
+    <input type="text" name="q" value="" />
+    <input type="submit" value="搜索" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>
   
   <div id="search-results">
   
   </div>
 
-                        
-                    </div>
-                </div>
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; 版权所有 2021-2022, Jinzhe Wang.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
             </div>
-        </div>
-    </div>    
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.1.1',
-            LANGUAGE:'zh_CN',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="_static/searchtools.js"></script>
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+          </div>
+      </page>
+    </div></div>
+    
   <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
+    $('#fallback').hide();
   </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-  
-    <div class="footer" role="contentinfo">
-        <div class="container">
-            &#169; 版权所有 2021-2022, Jinzhe Wang.
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.
-        </div>
-    </div>
-  
 
-</body>
+  </body>
 </html>
