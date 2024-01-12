@@ -177,6 +177,23 @@
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>模拟事件类。</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.app_is_running">
+<span class="sig-name descname"><span class="pre">app_is_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.app_is_running" title="永久链接至目标">¶</a></dt>
+<dd><p>查询应用是否正在运行。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 应用sopid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>应用正在运行返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.back">
 <span class="sig-name descname"><span class="pre">back</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.back" title="永久链接至目标">¶</a></dt>
 <dd><p>点击设备返回按键。</p>
@@ -192,11 +209,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.clear_app_data">
-<span class="sig-name descname"><span class="pre">clear_app_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.clear_app_data" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clear_app_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.clear_app_data" title="永久链接至目标">¶</a></dt>
 <dd><p>清除应用数据。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>sopid</strong> – 应用sopid</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 应用sopid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>成功返回True，否则为False</p>
@@ -223,13 +243,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uiappid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.close" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uiappid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.close" title="永久链接至目标">¶</a></dt>
 <dd><p>关闭应用。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sopid</strong> – 应用sopid</p></li>
 <li><p><strong>uiappid</strong> – 应用uiappid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -605,11 +626,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.install">
-<span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.install" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.install" title="永久链接至目标">¶</a></dt>
 <dd><p>安装应用。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>file_path</strong> – 控制端.sop文件的路径</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> – 控制端.sop(.apk)文件的路径</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>成功返回True，否则为False</p>
@@ -619,11 +643,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.is_installed">
-<span class="sig-name descname"><span class="pre">is_installed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.is_installed" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_installed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.is_installed" title="永久链接至目标">¶</a></dt>
 <dd><p>判断指定应用是否已安装。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>sopid</strong> – 指定应用的sopid</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 指定应用的sopid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>已安装返回True，否则为False</p>
@@ -644,11 +671,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.is_topmost">
-<span class="sig-name descname"><span class="pre">is_topmost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.is_topmost" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_topmost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.is_topmost" title="永久链接至目标">¶</a></dt>
 <dd><p>判断指定应用是否显示在屏幕最上层。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>sopid</strong> – 指定应用的sopid</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 指定应用的sopid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>在最上层返回True，否则为False</p>
@@ -683,7 +713,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.launch">
-<span class="sig-name descname"><span class="pre">launch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uiappid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.launch" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">launch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uiappid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.launch" title="永久链接至目标">¶</a></dt>
 <dd><p>启动应用。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -691,6 +721,7 @@
 <li><p><strong>sopid</strong> – 应用sopid</p></li>
 <li><p><strong>uiappid</strong> – 应用uiappid</p></li>
 <li><p><strong>timeout</strong> – 超时时间(单位:秒)，默认为框架超时时间</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -1160,11 +1191,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Events.Events.uninstall">
-<span class="sig-name descname"><span class="pre">uninstall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.uninstall" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">uninstall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syberdroid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Events.Events.uninstall" title="永久链接至目标">¶</a></dt>
 <dd><p>卸载应用。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>sopid</strong> – 要卸载的应用sopid</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 要卸载的应用sopid</p></li>
+<li><p><strong>syberdroid</strong> – 是否为安卓兼容应用，默认为否</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>成功返回True，否则为False</p>
