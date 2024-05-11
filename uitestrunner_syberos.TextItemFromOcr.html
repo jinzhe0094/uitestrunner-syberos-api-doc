@@ -166,6 +166,118 @@
   <section id="textitemfromocr-module">
 <h1>TextItemFromOcr module<a class="headerlink" href="#textitemfromocr-module" title="永久链接至标题">¶</a></h1>
 <p>ocr识别到的文本元素类型。</p>
+<span class="target" id="module-uitestrunner_syberos.TextItemFromOcr"></span><dl class="py class">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextItemFromOcr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ocr识别到的文本元素类型。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_x">
+<span class="sig-name descname"><span class="pre">center_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_x" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的中心点相对于全局的映射横坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>横坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_y">
+<span class="sig-name descname"><span class="pre">center_y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.center_y" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的中心点相对于全局的映射纵坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>纵坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.click">
+<span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.click" title="永久链接至目标">¶</a></dt>
+<dd><p>点击文本。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>delay</strong> – 点击延时时间(单位:毫秒)，默认无延时</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.height">
+<span class="sig-name descname"><span class="pre">height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.height" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件的高度整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>高度整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.submit_string">
+<span class="sig-name descname"><span class="pre">submit_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.submit_string" title="永久链接至目标">¶</a></dt>
+<dd><p>向元素控件提交文本(模拟输入法事件)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>text</strong> – 要提交的文本字符串</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.text">
+<span class="sig-name descname"><span class="pre">text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.text" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的文本信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>文本字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.width">
+<span class="sig-name descname"><span class="pre">width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.width" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件的宽度整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>宽度整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.x">
+<span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.x" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的左上角相对于全局的映射横坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>横坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.y">
+<span class="sig-name descname"><span class="pre">y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr.y" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素的左上角相对于全局的映射纵坐标整数值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>纵坐标整数值</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
