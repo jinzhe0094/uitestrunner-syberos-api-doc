@@ -767,11 +767,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.watcher">
-<span class="sig-name descname"><span class="pre">watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.Watcher" title="uitestrunner_syberos.Watcher.Watcher"><span class="pre">uitestrunner_syberos.Watcher.Watcher</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.watcher" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.Watcher" title="uitestrunner_syberos.Watcher.Watcher"><span class="pre">uitestrunner_syberos.Watcher.Watcher</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.watcher" title="永久链接至目标">¶</a></dt>
 <dd><p>创建一个待启动的监视者，可以根据指定条件作出相应反应。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – 标识名称，不可重复</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – 标识名称，不可重复</p></li>
+<li><p><strong>is_run</strong> – 是否在创建时启动，默认为不启动</p></li>
+</ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>返回一个实例化的Watcher对象</p>
