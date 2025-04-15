@@ -172,10 +172,51 @@
 <h1>Watcher module<a class="headerlink" href="#watcher-module" title="永久链接至标题">¶</a></h1>
 <p>监视者模块，主要包含监视者类与监视者上下文类，负责监视者实例的生成与管理，通常由Device.watcher(name: str)接口直接返回Watcher实例。</p>
 <span class="target" id="module-uitestrunner_syberos.Watcher"></span><dl class="py class">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Watcher.Watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>监视者类。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher.when">
+<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uitestrunner_syberos.Watcher.WatchContext_T</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.Watcher.when" title="永久链接至目标">¶</a></dt>
+<dd><p>设置监视者判断条件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sop_id</strong> – 设备应用sopid</p></li>
+<li><p><strong>xpath_key</strong> – 用于查询ini文件中xpath值的键</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回上下文WatchContext</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WatchContext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>监视者上下文类。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.when">
+<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uitestrunner_syberos.Watcher.WatchContext_T</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.when" title="永久链接至目标">¶</a></dt>
+<dd><p>设置监视者判断条件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sop_id</strong> – 设备应用sopid</p></li>
+<li><p><strong>xpath_key</strong> – 用于查询ini文件中xpath值的键</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>返回上下文WatchContext</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.click">
 <span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.click" title="永久链接至目标">¶</a></dt>
@@ -183,6 +224,20 @@
 <dl class="field-list simple">
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.pause">
+<span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="uitestrunner_syberos.DataStruct.html#uitestrunner_syberos.DataStruct.Keys" title="uitestrunner_syberos.DataStruct.Keys"><span class="pre">uitestrunner_syberos.DataStruct.Keys</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.pause" title="永久链接至目标">¶</a></dt>
+<dd><p>如果所有when()接口设置的判断条件均为真时，执行按键操作。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>key</strong> – WatcherActive.Keys类型的枚举值，目前仅支持BACK和HOME</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
 </dd>
 </dl>
 </dd></dl>
@@ -205,20 +260,6 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.pause">
-<span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="uitestrunner_syberos.DataStruct.html#uitestrunner_syberos.DataStruct.Keys" title="uitestrunner_syberos.DataStruct.Keys"><span class="pre">uitestrunner_syberos.DataStruct.Keys</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.pause" title="永久链接至目标">¶</a></dt>
-<dd><p>如果所有when()接口设置的判断条件均为真时，执行按键操作。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>key</strong> – WatcherActive.Keys类型的枚举值，目前仅支持BACK和HOME</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ui_app_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.stop" title="永久链接至目标">¶</a></dt>
 <dd><p>如果所有when()接口设置的判断条件均为真时，执行停止APP操作。</p>
@@ -231,47 +272,6 @@
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.WatchContext.when">
-<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uitestrunner_syberos.Watcher.WatchContext_T</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.WatchContext.when" title="永久链接至目标">¶</a></dt>
-<dd><p>设置监视者判断条件。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sop_id</strong> – 设备应用sopid</p></li>
-<li><p><strong>xpath_key</strong> – 用于查询ini文件中xpath值的键</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>返回上下文WatchContext</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Watcher.Watcher" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>监视者类。</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Watcher.Watcher.when">
-<span class="sig-name descname"><span class="pre">when</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uitestrunner_syberos.Watcher.WatchContext_T</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Watcher.Watcher.when" title="永久链接至目标">¶</a></dt>
-<dd><p>设置监视者判断条件。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sop_id</strong> – 设备应用sopid</p></li>
-<li><p><strong>xpath_key</strong> – 用于查询ini文件中xpath值的键</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>返回上下文WatchContext</p>
 </dd>
 </dl>
 </dd></dl>

@@ -171,7 +171,13 @@
   <section id="device-module">
 <h1>Device module<a class="headerlink" href="#device-module" title="永久链接至标题">¶</a></h1>
 <p>SyberOS设备类，继承自Events基类，负责驱动设备模拟事件与获取布局信息。</p>
-<span class="target" id="module-uitestrunner_syberos.Device"></span><dl class="py class">
+<span class="target" id="module-uitestrunner_syberos.Device"></span><dl class="py function">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.get_free_port">
+<span class="sig-name descname"><span class="pre">get_free_port</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.get_free_port" title="永久链接至目标">¶</a></dt>
+<dd><p>获取一个可用的空闲端口</p>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syslog_enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_main</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_xml_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_wd_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="uitestrunner_syberos.Events.html#uitestrunner_syberos.Events.Events" title="uitestrunner_syberos.Events.Events"><code class="xref py py-class docutils literal notranslate"><span class="pre">uitestrunner_syberos.Events.Events</span></code></a></p>
@@ -194,318 +200,32 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.answer_voice_with_support_device">
-<span class="sig-name descname"><span class="pre">answer_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.answer_voice_with_support_device" title="永久链接至目标">¶</a></dt>
-<dd><p>辅助机等待来电并接听。注意：需要在调用此接口后并且在超时时间内向辅助机拨打电话</p>
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.watcher">
+<span class="sig-name descname"><span class="pre">watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.Watcher" title="uitestrunner_syberos.Watcher.Watcher"><span class="pre">uitestrunner_syberos.Watcher.Watcher</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个待启动的监视者，可以根据指定条件作出相应反应。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
-<li><p><strong>self_number</strong> – 本机号码</p></li>
-<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束等待或结束通话</p></li>
+<li><p><strong>name</strong> – 标识名称，不可重复</p></li>
+<li><p><strong>is_run</strong> – 是否在创建时启动，默认为不启动</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
-<dd class="field-even"><p>成功返回True，否则返回False</p>
+<dd class="field-even"><p>返回一个实例化的Watcher对象</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.call_voice_with_support_device">
-<span class="sig-name descname"><span class="pre">call_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.call_voice_with_support_device" title="永久链接至目标">¶</a></dt>
-<dd><p>通过辅助机拨打语音电话。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
-<li><p><strong>self_number</strong> – 本机号码</p></li>
-<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束通话</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>成功返回True，否则返回False</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.delete_watcher">
-<span class="sig-name descname"><span class="pre">delete_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.delete_watcher" title="永久链接至目标">¶</a></dt>
-<dd><p>删除一个已有的监视者。</p>
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.start_watcher">
+<span class="sig-name descname"><span class="pre">start_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.start_watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>启动一个已有的监视者。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.display_height">
-<span class="sig-name descname"><span class="pre">display_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.display_height" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备屏幕高度。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>屏幕高度像素数int值</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.display_width">
-<span class="sig-name descname"><span class="pre">display_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.display_width" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备屏幕宽度。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>屏幕宽度像素数int值</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.end_call_with_support_device">
-<span class="sig-name descname"><span class="pre">end_call_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.end_call_with_support_device" title="永久链接至目标">¶</a></dt>
-<dd><p>立即结束辅助机正在进行的语音电话。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>token</strong> – 获取到的辅助机验证token</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>成功返回True，否则返回False</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.find_item_by_xpath">
-<span class="sig-name descname"><span class="pre">find_item_by_xpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.find_item_by_xpath" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件实例化对象。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sopid</strong> – 设备应用的sopid</p></li>
-<li><p><strong>xpath</strong> – xpath值字符串</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>Item对象</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.find_item_by_xpath_key">
-<span class="sig-name descname"><span class="pre">find_item_by_xpath_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.find_item_by_xpath_key" title="永久链接至目标">¶</a></dt>
-<dd><p>获取元素控件实例化对象。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sopid</strong> – 设备应用的sopid</p></li>
-<li><p><strong>xpath_key</strong> – xpath信息ini文件中的键</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>Item对象</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_environment">
-<span class="sig-name descname"><span class="pre">get_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'General'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_environment" title="永久链接至目标">¶</a></dt>
-<dd><p>获取支撑脚本执行的环境变量，保存在脚本目录下的environment.ini文件中。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> – 键</p></li>
-<li><p><strong>module</strong> – 模块名称，默认值：General</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>环境变量值</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_framework_info">
-<span class="sig-name descname"><span class="pre">get_framework_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_framework_info" title="永久链接至目标">¶</a></dt>
-<dd><p>获取设备内的测试框架信息。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>字典形式信息键值对，可能为空</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_latest_sms_from_support_device_inbox">
-<span class="sig-name descname"><span class="pre">get_latest_sms_from_support_device_inbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">support_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_latest_sms_from_support_device_inbox" title="永久链接至目标">¶</a></dt>
-<dd><p>获取辅助机短信收件箱中最新一条本机发送的短信内容。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>support_number</strong> – 获取到的辅助机号码</p></li>
-<li><p><strong>self_number</strong> – 本机号码</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>短信内容或空字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_phone_number">
-<span class="sig-name descname"><span class="pre">get_phone_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_phone_number" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备电话号码。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>电话号码列表</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_recv">
-<span class="sig-name descname"><span class="pre">get_support_device_number_for_sms_recv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_recv" title="永久链接至目标">¶</a></dt>
-<dd><p>获取可接收短信的辅助机电话号码。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>电话号码字符串，如果无可用电话号码则返回空字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_send">
-<span class="sig-name descname"><span class="pre">get_support_device_number_for_sms_send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_send" title="永久链接至目标">¶</a></dt>
-<dd><p>获取可发送短信的辅助机电话号码。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>电话号码字符串，如果无可用电话号码则返回空字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_voice">
-<span class="sig-name descname"><span class="pre">get_support_device_number_for_voice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_voice" title="永久链接至目标">¶</a></dt>
-<dd><p>获取可接打电话的辅助机电话号码。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>电话号码字符串和token，如果无可用电话号码则返回两个空字符串，调用辅助机语音电话相关接口时需要携带token验证，token会在无操作30秒钟后失效</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_text_item_list">
-<span class="sig-name descname"><span class="pre">get_text_item_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr"><span class="pre">uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_text_item_list" title="永久链接至目标">¶</a></dt>
-<dd><p>根据元素控件的截图进行OCR图像识别获取文本元素实例化对象列表。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>item</strong> – 传入的元素控件</p></li>
-<li><p><strong>rotation</strong> – 元素的旋转角度，默认自动获取</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>TextItemFromOcr对象列表</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_text_item_list_full_screen">
-<span class="sig-name descname"><span class="pre">get_text_item_list_full_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr"><span class="pre">uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_text_item_list_full_screen" title="永久链接至目标">¶</a></dt>
-<dd><p>全屏截图进行OCR图像识别获取文本元素实例化对象列表。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>rotation</strong> – 元素的旋转角度，默认自动获取</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>TextItemFromOcr对象列表</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_topmost_info">
-<span class="sig-name descname"><span class="pre">get_topmost_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_topmost_info" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前显示顶层的应用信息。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>字典格式的应用信息</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_xpath">
-<span class="sig-name descname"><span class="pre">get_xpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_xpath" title="永久链接至目标">¶</a></dt>
-<dd><p>通过sopid与key在xpath信息ini文件中查询xpath值。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sop_id</strong> – 设备应用的sopid</p></li>
-<li><p><strong>key</strong> – 键</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>xpath值字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.grab_image_to_base64">
-<span class="sig-name descname"><span class="pre">grab_image_to_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.grab_image_to_base64" title="永久链接至目标">¶</a></dt>
-<dd><p>获取指定位置、大小及状态的范围截图。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>cx</strong> – 范围旋转缩放前的中心点横坐标</p></li>
-<li><p><strong>cy</strong> – 范围旋转缩放前的中心点纵坐标</p></li>
-<li><p><strong>width</strong> – 范围旋转缩放前的宽度</p></li>
-<li><p><strong>height</strong> – 范围旋转缩放前的高度</p></li>
-<li><p><strong>rotation</strong> – 顺时针旋转角度</p></li>
-<li><p><strong>scale</strong> – 缩放系数</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>截图的base64形态</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.has_environment">
-<span class="sig-name descname"><span class="pre">has_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'General'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.has_environment" title="永久链接至目标">¶</a></dt>
-<dd><p>获取指定环境变量是否存在。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> – 键</p></li>
-<li><p><strong>module</strong> – 模块名称，默认值：General</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.os_version">
-<span class="sig-name descname"><span class="pre">os_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.os_version" title="永久链接至目标">¶</a></dt>
-<dd><p>获取SyberOS系统版本。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>系统版本字符串</p>
 </dd>
 </dl>
 </dd></dl>
@@ -525,110 +245,12 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.permissions">
-<span class="sig-name descname"><span class="pre">permissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.permissions" title="永久链接至目标">¶</a></dt>
-<dd><p>获取设备权限列表。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>权限列表</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.refresh_layout">
-<span class="sig-name descname"><span class="pre">refresh_layout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.refresh_layout" title="永久链接至目标">¶</a></dt>
-<dd><p>刷新当前设备的UI布局信息。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.reject_voice_with_support_device">
-<span class="sig-name descname"><span class="pre">reject_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.reject_voice_with_support_device" title="永久链接至目标">¶</a></dt>
-<dd><p>辅助机等待来电并拒接。注意：需要在调用此接口后并且在超时时间内向辅助机拨打电话</p>
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.delete_watcher">
+<span class="sig-name descname"><span class="pre">delete_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.delete_watcher" title="永久链接至目标">¶</a></dt>
+<dd><p>删除一个已有的监视者。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
-<li><p><strong>self_number</strong> – 本机号码</p></li>
-<li><p><strong>wait_time</strong> – 振铃等待时间，默认0秒</p></li>
-<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束等待</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>成功返回True，否则返回False</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.screenshot">
-<span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.screenshot" title="永久链接至目标">¶</a></dt>
-<dd><p>获取设备当前屏幕截图。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>path</strong> – 截图存放路径(默认为前脚本目录下的screenshots文件夹或者用户通过Device.set_screenshots_path(path: str)接口设置的路径)</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>截图名称</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.send_sms_with_support_device">
-<span class="sig-name descname"><span class="pre">send_sms_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">support_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.send_sms_with_support_device" title="永久链接至目标">¶</a></dt>
-<dd><p>通过辅助机向本机发送短信。注意：每台辅助机在发送短信后有10秒冷却时间。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>support_number</strong> – 获取到的辅助机号码</p></li>
-<li><p><strong>message</strong> – 短信内容</p></li>
-<li><p><strong>self_number</strong> – 本机号码</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>成功返回True，否则返回False</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.serial_number">
-<span class="sig-name descname"><span class="pre">serial_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.serial_number" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备硬件序列号。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>序列号字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_default_timeout">
-<span class="sig-name descname"><span class="pre">set_default_timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_default_timeout" title="永久链接至目标">¶</a></dt>
-<dd><p>设置当前框架默认超时时间(默认为30秒)。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>timeout</strong> – 超时时间(单位:秒)</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_screenshots_path">
-<span class="sig-name descname"><span class="pre">set_screenshots_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_screenshots_path" title="永久链接至目标">¶</a></dt>
-<dd><p>设置存放系统截图的文件夹路径(默认为当前脚本目录下的screenshots文件夹)。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>path</strong> – 文件夹路径</p>
+<dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>无</p>
@@ -649,6 +271,28 @@
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_output">
+<span class="sig-name descname"><span class="pre">syslog_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_output" title="永久链接至目标">¶</a></dt>
+<dd><p>获取设备log输出开关状态。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>log输出开关, bool值, True为开启，False为关闭</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_output_keyword">
+<span class="sig-name descname"><span class="pre">syslog_output_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_output_keyword" title="永久链接至目标">¶</a></dt>
+<dd><p>查询当前设备log输出时的筛选关键字。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>关键字字符串</p>
 </dd>
 </dl>
 </dd></dl>
@@ -683,95 +327,12 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_xpath_list">
-<span class="sig-name descname"><span class="pre">set_xpath_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_xpath_list" title="永久链接至目标">¶</a></dt>
-<dd><p>设置存放xpath信息的ini文件路径(默认为当前脚本目录下的xpath_list.ini)。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>path</strong> – 文件路径</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.start_watcher">
-<span class="sig-name descname"><span class="pre">start_watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.start_watcher" title="永久链接至目标">¶</a></dt>
-<dd><p>启动一个已有的监视者。</p>
-<dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – 监视者标识名称</p>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>无</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.support_rotate_screen">
-<span class="sig-name descname"><span class="pre">support_rotate_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.support_rotate_screen" title="永久链接至目标">¶</a></dt>
-<dd><p>读取配置文件获取设备是否支持旋转屏幕。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>支持返回True，否则为False</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_output">
-<span class="sig-name descname"><span class="pre">syslog_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_output" title="永久链接至目标">¶</a></dt>
-<dd><p>获取设备log输出开关状态。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>log输出开关, bool值, True为开启，False为关闭</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_output_keyword">
-<span class="sig-name descname"><span class="pre">syslog_output_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_output_keyword" title="永久链接至目标">¶</a></dt>
-<dd><p>查询当前设备log输出时的筛选关键字。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>关键字字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_save">
 <span class="sig-name descname"><span class="pre">syslog_save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_save" title="永久链接至目标">¶</a></dt>
 <dd><p>获取当前是否正在保存设备log。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回</dt>
 <dd class="field-odd"><p>bool值，True为正在保存中，False则相反</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_save_keyword">
-<span class="sig-name descname"><span class="pre">syslog_save_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_save_keyword" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备log保存筛选关键字。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>关键字字符串</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_save_name">
-<span class="sig-name descname"><span class="pre">syslog_save_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_save_name" title="永久链接至目标">¶</a></dt>
-<dd><p>获取当前设备log保存名称。</p>
-<dl class="field-list simple">
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>名称字符串</p>
 </dd>
 </dl>
 </dd></dl>
@@ -788,28 +349,467 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.watcher">
-<span class="sig-name descname"><span class="pre">watcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Watcher.html#uitestrunner_syberos.Watcher.Watcher" title="uitestrunner_syberos.Watcher.Watcher"><span class="pre">uitestrunner_syberos.Watcher.Watcher</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.watcher" title="永久链接至目标">¶</a></dt>
-<dd><p>创建一个待启动的监视者，可以根据指定条件作出相应反应。</p>
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_save_name">
+<span class="sig-name descname"><span class="pre">syslog_save_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_save_name" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备log保存名称。</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – 标识名称，不可重复</p></li>
-<li><p><strong>is_run</strong> – 是否在创建时启动，默认为不启动</p></li>
-</ul>
-</dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>返回一个实例化的Watcher对象</p>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>名称字符串</p>
 </dd>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.syslog_save_keyword">
+<span class="sig-name descname"><span class="pre">syslog_save_keyword</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.syslog_save_keyword" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备log保存筛选关键字。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>关键字字符串</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="uitestrunner_syberos.Device.get_free_port">
-<span class="sig-name descname"><span class="pre">get_free_port</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.get_free_port" title="永久链接至目标">¶</a></dt>
-<dd><p>获取一个可用的空闲端口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_default_timeout">
+<span class="sig-name descname"><span class="pre">set_default_timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_default_timeout" title="永久链接至目标">¶</a></dt>
+<dd><p>设置当前框架默认超时时间(默认为30秒)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>timeout</strong> – 超时时间(单位:秒)</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_xpath_list">
+<span class="sig-name descname"><span class="pre">set_xpath_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_xpath_list" title="永久链接至目标">¶</a></dt>
+<dd><p>设置存放xpath信息的ini文件路径(默认为当前脚本目录下的xpath_list.ini)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> – 文件路径</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.set_screenshots_path">
+<span class="sig-name descname"><span class="pre">set_screenshots_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.set_screenshots_path" title="永久链接至目标">¶</a></dt>
+<dd><p>设置存放系统截图的文件夹路径(默认为当前脚本目录下的screenshots文件夹)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> – 文件夹路径</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.screenshot">
+<span class="sig-name descname"><span class="pre">screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.screenshot" title="永久链接至目标">¶</a></dt>
+<dd><p>获取设备当前屏幕截图。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> – 截图存放路径(默认为前脚本目录下的screenshots文件夹或者用户通过Device.set_screenshots_path(path: str)接口设置的路径)</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>截图名称</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_framework_info">
+<span class="sig-name descname"><span class="pre">get_framework_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_framework_info" title="永久链接至目标">¶</a></dt>
+<dd><p>获取设备内的测试框架信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>字典形式信息键值对，可能为空</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.grab_image_to_base64">
+<span class="sig-name descname"><span class="pre">grab_image_to_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.grab_image_to_base64" title="永久链接至目标">¶</a></dt>
+<dd><p>获取指定位置、大小及状态的范围截图。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cx</strong> – 范围旋转缩放前的中心点横坐标</p></li>
+<li><p><strong>cy</strong> – 范围旋转缩放前的中心点纵坐标</p></li>
+<li><p><strong>width</strong> – 范围旋转缩放前的宽度</p></li>
+<li><p><strong>height</strong> – 范围旋转缩放前的高度</p></li>
+<li><p><strong>rotation</strong> – 顺时针旋转角度</p></li>
+<li><p><strong>scale</strong> – 缩放系数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>截图的base64形态</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.display_width">
+<span class="sig-name descname"><span class="pre">display_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.display_width" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备屏幕宽度。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>屏幕宽度像素数int值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.display_height">
+<span class="sig-name descname"><span class="pre">display_height</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.display_height" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备屏幕高度。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>屏幕高度像素数int值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_xpath">
+<span class="sig-name descname"><span class="pre">get_xpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_xpath" title="永久链接至目标">¶</a></dt>
+<dd><p>通过sopid与key在xpath信息ini文件中查询xpath值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sop_id</strong> – 设备应用的sopid</p></li>
+<li><p><strong>key</strong> – 键</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>xpath值字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.has_environment">
+<span class="sig-name descname"><span class="pre">has_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'General'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.has_environment" title="永久链接至目标">¶</a></dt>
+<dd><p>获取指定环境变量是否存在。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – 键</p></li>
+<li><p><strong>module</strong> – 模块名称，默认值：General</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_environment">
+<span class="sig-name descname"><span class="pre">get_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'General'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_environment" title="永久链接至目标">¶</a></dt>
+<dd><p>获取支撑脚本执行的环境变量，保存在脚本目录下的environment.ini文件中。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – 键</p></li>
+<li><p><strong>module</strong> – 模块名称，默认值：General</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>环境变量值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.refresh_layout">
+<span class="sig-name descname"><span class="pre">refresh_layout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.refresh_layout" title="永久链接至目标">¶</a></dt>
+<dd><p>刷新当前设备的UI布局信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.os_version">
+<span class="sig-name descname"><span class="pre">os_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.os_version" title="永久链接至目标">¶</a></dt>
+<dd><p>获取SyberOS系统版本。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>系统版本字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.serial_number">
+<span class="sig-name descname"><span class="pre">serial_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.serial_number" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备硬件序列号。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>序列号字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_phone_number">
+<span class="sig-name descname"><span class="pre">get_phone_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_phone_number" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前设备电话号码。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>电话号码列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_topmost_info">
+<span class="sig-name descname"><span class="pre">get_topmost_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_topmost_info" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前显示顶层的应用信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>字典格式的应用信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.find_item_by_xpath_key">
+<span class="sig-name descname"><span class="pre">find_item_by_xpath_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.find_item_by_xpath_key" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件实例化对象。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 设备应用的sopid</p></li>
+<li><p><strong>xpath_key</strong> – xpath信息ini文件中的键</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>Item对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.find_item_by_xpath">
+<span class="sig-name descname"><span class="pre">find_item_by_xpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sopid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.find_item_by_xpath" title="永久链接至目标">¶</a></dt>
+<dd><p>获取元素控件实例化对象。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sopid</strong> – 设备应用的sopid</p></li>
+<li><p><strong>xpath</strong> – xpath值字符串</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>Item对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_text_item_list_full_screen">
+<span class="sig-name descname"><span class="pre">get_text_item_list_full_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr"><span class="pre">uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_text_item_list_full_screen" title="永久链接至目标">¶</a></dt>
+<dd><p>全屏截图进行OCR图像识别获取文本元素实例化对象列表。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>rotation</strong> – 元素的旋转角度，默认自动获取</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>TextItemFromOcr对象列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_text_item_list">
+<span class="sig-name descname"><span class="pre">get_text_item_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="uitestrunner_syberos.Item.html#uitestrunner_syberos.Item.Item" title="uitestrunner_syberos.Item.Item"><span class="pre">uitestrunner_syberos.Item.Item</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="uitestrunner_syberos.TextItemFromOcr.html#uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr" title="uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr"><span class="pre">uitestrunner_syberos.TextItemFromOcr.TextItemFromOcr</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_text_item_list" title="永久链接至目标">¶</a></dt>
+<dd><p>根据元素控件的截图进行OCR图像识别获取文本元素实例化对象列表。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> – 传入的元素控件</p></li>
+<li><p><strong>rotation</strong> – 元素的旋转角度，默认自动获取</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>TextItemFromOcr对象列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.support_rotate_screen">
+<span class="sig-name descname"><span class="pre">support_rotate_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.support_rotate_screen" title="永久链接至目标">¶</a></dt>
+<dd><p>读取配置文件获取设备是否支持旋转屏幕。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>支持返回True，否则为False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_send">
+<span class="sig-name descname"><span class="pre">get_support_device_number_for_sms_send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_send" title="永久链接至目标">¶</a></dt>
+<dd><p>获取可发送短信的辅助机电话号码。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>电话号码字符串，如果无可用电话号码则返回空字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_recv">
+<span class="sig-name descname"><span class="pre">get_support_device_number_for_sms_recv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_sms_recv" title="永久链接至目标">¶</a></dt>
+<dd><p>获取可接收短信的辅助机电话号码。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>电话号码字符串，如果无可用电话号码则返回空字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.send_sms_with_support_device">
+<span class="sig-name descname"><span class="pre">send_sms_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">support_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.send_sms_with_support_device" title="永久链接至目标">¶</a></dt>
+<dd><p>通过辅助机向本机发送短信。注意：每台辅助机在发送短信后有10秒冷却时间。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>support_number</strong> – 获取到的辅助机号码</p></li>
+<li><p><strong>message</strong> – 短信内容</p></li>
+<li><p><strong>self_number</strong> – 本机号码</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则返回False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_latest_sms_from_support_device_inbox">
+<span class="sig-name descname"><span class="pre">get_latest_sms_from_support_device_inbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">support_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_latest_sms_from_support_device_inbox" title="永久链接至目标">¶</a></dt>
+<dd><p>获取辅助机短信收件箱中最新一条本机发送的短信内容。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>support_number</strong> – 获取到的辅助机号码</p></li>
+<li><p><strong>self_number</strong> – 本机号码</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>短信内容或空字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.get_support_device_number_for_voice">
+<span class="sig-name descname"><span class="pre">get_support_device_number_for_voice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'str'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.get_support_device_number_for_voice" title="永久链接至目标">¶</a></dt>
+<dd><p>获取可接打电话的辅助机电话号码。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>电话号码字符串和token，如果无可用电话号码则返回两个空字符串，调用辅助机语音电话相关接口时需要携带token验证，token会在无操作30秒钟后失效</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.call_voice_with_support_device">
+<span class="sig-name descname"><span class="pre">call_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.call_voice_with_support_device" title="永久链接至目标">¶</a></dt>
+<dd><p>通过辅助机拨打语音电话。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
+<li><p><strong>self_number</strong> – 本机号码</p></li>
+<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束通话</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则返回False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.answer_voice_with_support_device">
+<span class="sig-name descname"><span class="pre">answer_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.answer_voice_with_support_device" title="永久链接至目标">¶</a></dt>
+<dd><p>辅助机等待来电并接听。注意：需要在调用此接口后并且在超时时间内向辅助机拨打电话</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
+<li><p><strong>self_number</strong> – 本机号码</p></li>
+<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束等待或结束通话</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则返回False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.end_call_with_support_device">
+<span class="sig-name descname"><span class="pre">end_call_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.end_call_with_support_device" title="永久链接至目标">¶</a></dt>
+<dd><p>立即结束辅助机正在进行的语音电话。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>token</strong> – 获取到的辅助机验证token</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则返回False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.reject_voice_with_support_device">
+<span class="sig-name descname"><span class="pre">reject_voice_with_support_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.reject_voice_with_support_device" title="永久链接至目标">¶</a></dt>
+<dd><p>辅助机等待来电并拒接。注意：需要在调用此接口后并且在超时时间内向辅助机拨打电话</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> – 获取到的辅助机验证token</p></li>
+<li><p><strong>self_number</strong> – 本机号码</p></li>
+<li><p><strong>wait_time</strong> – 振铃等待时间，默认0秒</p></li>
+<li><p><strong>timeout</strong> – 超时时间，默认60秒，超时后辅助机会自动结束等待</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>成功返回True，否则返回False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uitestrunner_syberos.Device.Device.permissions">
+<span class="sig-name descname"><span class="pre">permissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#uitestrunner_syberos.Device.Device.permissions" title="永久链接至目标">¶</a></dt>
+<dd><p>获取设备权限列表。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>权限列表</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
