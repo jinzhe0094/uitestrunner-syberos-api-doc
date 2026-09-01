@@ -217,7 +217,7 @@ enable_scaling: True=启用缩放，False=不缩放</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="uitestrunner_syberos.Item.Item">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d:</span> <span class="pre">&lt;module</span> <span class="pre">'uitestrunner_syberos.Device'</span> <span class="pre">from</span> <span class="pre">'/home/runner/work/uitestrunner_syberos/uitestrunner_syberos/src/uitestrunner_syberos/Device.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Item.Item" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d:</span> <span class="pre">&lt;module</span> <span class="pre">'uitestrunner_syberos.Device'</span> <span class="pre">from</span> <span class="pre">'/home/runner/work/uitestrunner_syberos/uitestrunner_syberos/src/uitestrunner_syberos/Device.py'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xpath:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_xpath:</span> <span class="pre">typing.Optional[typing.List[typing.Tuple[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uitestrunner_syberos.Item.Item" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>元素控件类，通过Device.find_item_by_xpath_key()与Device.find_item_by_xpath()两个接口结果返回实例化对象，不推荐单独使用。</p>
 <dl class="field-list simple">
@@ -225,8 +225,9 @@ enable_scaling: True=启用缩放，False=不缩放</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sopid</strong> – 元素控件所在的应用sopid</p></li>
 <li><p><strong>device</strong> – 实例化的Device对象</p></li>
-<li><p><strong>node</strong> – 对应的xml节点对象</p></li>
 <li><p><strong>xpath</strong> – xpath字符串</p></li>
+<li><p><strong>ignore_xpath</strong> – 忽略元素xpath列表</p></li>
+<li><p><strong>node</strong> – 对应的xml节点对象</p></li>
 </ul>
 </dd>
 </dl>
